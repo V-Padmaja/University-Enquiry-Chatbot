@@ -1,0 +1,227 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- library
+- library timings
+- Other questions
+- Hostel
+- library_incharge
+- library_borrow
+- library_return
+- utter_hostel
+- library_location
+- library_timings
+- other_questions
+- transport
+- trans_fee
+- utter_transport
+- trans_avail
+- hostel
+- hostel_timings
+- hostel_incharge
+- utter_clg_open
+- events
+- others
+- map
+- hostel_mess_timings
+- faculty
+- administration
+- ccg
+- register_complaints
+- anti_ragging
+- Contact_details
+- utter_emergency_hospital
+- emergency_hospital
+- utter_lost
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /transport
+      title: Transportation
+    - payload: /library
+      title: Library
+    - payload: /hostel
+      title: Hostel
+    - payload: /emergency_hospital
+      title: Hospital emergencies
+    - payload: /others
+      title: Others
+    text: Hey...I am a university bot here to help you...what do you want to know
+      about
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_library:
+  - buttons:
+    - payload: /library_location
+      title: Where is the library?
+    - payload: /library_timings
+      title: Library timings
+    - payload: /library_borrow
+      title: How do I borrow a book?
+    - payload: /library_return
+      title: How do I return a book?
+    - payload: /library_incharge
+      title: Library incharge
+    - payload: /other_questions
+      title: Other questions
+    text: Hi...what do you want to know about the library
+  utter_hostel:
+  - buttons:
+    - payload: /hostel_timings
+      title: Hostel timings
+    - payload: /hostel_incharge
+      title: Hostel incharge
+    - payload: /other_questions
+      title: others
+    text: Hi...what do you want to know about hostel facilities
+  utter_library_timings:
+  - text: The library stays open from 6:00am to 7:00pm on all days
+  utter_library_borrow:
+  - text: 'The procedure to borrow a book is as follows:  1.Select a book of your
+      choice from the library 2. Scan the book in the counter and register it in your
+      name. 3.Thats it....Very simple... The book is yours for a period of 3 weeks'
+  utter_library_incharge:
+  - text: The current library incharge is N Govindarajan...You can reach him personally
+      via reach_govindarajan@gmail.com.
+  utter_library_return:
+  - text: To return a book just slide into the returning box present outside the library
+      to its left.
+  utter_other_questions:
+  - text: For further details please contact Ms.Ramani ph:191267676 email:ramani@xyzmail.com
+  utter_transport:
+  - buttons:
+    - payload: /trans_avail
+      title: How to avail
+    - payload: /trans_fee
+      title: Transport fee
+    - payload: /other_questions
+      title: Others
+    text: What information would you like to know about our transportation services
+  utter_others:
+  - buttons:
+    - payload: /events
+      title: Events in college
+    - payload: /administration
+      title: Administration
+    - payload: /faculty
+      title: Faculty records
+    - payload: /map
+      title: College_routemap
+    text: What other information do you want
+  utter_library_location:
+  - text: When you enter the University you can find the library if tou take the first
+      right and walk 200 meters.
+  utter_cheer_up:
+  - text: pls cheer up
+  utter_trans_avail:
+  - text: In order to avail the university's transportation services you'll have to
+      register your name in the transport department with certificates .
+  utter_trans_fee:
+  - text: The transportation fee is Rs.20,000 per anum
+  utter_hostel_incharge:
+  - text: The current hostel incharge is M.Malini....You can reach her at malini123@mail.com
+  utter_hostel_timings:
+  - text: The hostel will remain closed from 7:00 pm to 5:00 am...Students can move
+      in and out of it from 5:00am to 7:00pm
+  utter_accept:
+  - text: yes....thankyou
+  utter_clg_open:
+  - text: the college opens at 7:00 am and classes start at 8
+  utter_sorry:
+  - text: sorry I couldn't respond to that properly....please could you rephrase your
+      question
+  utter_I_don't_know:
+  - text: 'Sorry...I do not have information on that right now. For further details
+      please contact Mr.Jaishankar ph:5676894543 email: Jaishankar@xyzmail.com'
+  utter_events1:
+  - image: https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1582139176g
+    text: As of now these are the events coming up in college....We have a joyfull
+      event night with singing, dancing and comedy
+  utter_events2:
+  - image: https://cdn1.vectorstock.com/i/1000x1000/92/30/music-fest-poster-template-show-exhibition-vector-28149230.jpg
+    text: We have a music fest for students
+  utter_event3:
+  - image: https://venngage-wordpress.s3.amazonaws.com/uploads/2019/12/Digital-Marketing-Conference-Event-Poster-Design-Template.jpg
+    text: Digital marketing meetup is considered a highlight of 2021
+  utter_more_info:
+  - text: For more information about the events please contact the Even Club head
+      Harish....We encourage you to participate and make the most out of your opportunities
+  utter_map:
+  - image: https://www.carroll.edu/sites/default/files/content/about/map/2020-campus-map-oct.jpg
+    text: 'https://www.google.com/maps/d/viewer?mid=1mur3OBbdG2VL-UPGOTV-j2vO6JE&usp=sharing  If
+      you are lost do not worry...Hope this map of the campus helps you find your
+      way : ) Click on the link to get a better view'
+  utter_hostel_mess_timings:
+  - text: 'The mess timings are : Breakfast 7am-10am Lunch 1pm-3pm Dinner 7:30pm-10pm'
+  utter_administration:
+  - buttons:
+    - payload: /anti_ragging
+      title: Anti_ragging
+    - payload: /ccg
+      title: Counselling and career guidance
+    - payload: /register_complaints
+      title: Register complaints
+    - payload: /Contact_details
+      title: Contact details
+    text: Would you like to know about any of the following....if yes please select
+      the corresponding option if not select contact details to directly contact admin
+      office
+  utter_anti_ragging:
+  - text: 'If you have faced any abuse in the form of ragging please contact Mrs.Nalini
+      Ramshankar. She is the head of the Anti_Ragging department. Feel free to reach
+      out at any time 24/7 and required action will be taken without fail. Contact
+      : 875646678 Email : nalini@gmail.com'
+  utter_ccg:
+  - text: 'For any career guidance contact Mr Tushar Goshal ph: 785690908....However
+      these are some of the ongoing internships now'
+  utter_internship_1:
+  - image: https://s3.amazonaws.com/thumbnails.venngage.com/template/4a37a06c-02c3-48b2-bd63-1897356c6abf.png
+    text: Student career guigance
+  utter_internship_2:
+  - image: https://www.empoweringvision.org/wp-content/uploads/2017/06/internship-poster-new.jpg
+    text: Envision program
+  utter_faculty:
+  - text: Please refer to this to know about faculties in the university "http://localhost/chatbot/faculty.php"
+  utter_Contact_details:
+  - text: "1. Pamnath : Ph: 679689787 Email: ramnath@gmail.com                   \
+      \                                                                          \
+      \ \n2. Arjun : Ph: 9876060705 Email: arjun@gmail.com\n\n 3. Ankit : Ph:7898965098\
+      \ Email: ankit@gmail.com"
+  utter_emergency_hospital:
+  - text: "1. Map: If you or your friend is hurt the university has a health care\
+      \ center. The map is given below...Hope you find the way in this emergency \
+      \                               \n2. In case you are not able to move from your\
+      \ location contact Health care center - 89765656. Health care attenders will\
+      \ reach your location in a few minutes to help you"
+  utter_hospital_map:
+  - image: https://www.westpark.org/-/media/Images/General/WestParkCampusmap.ashx?la=en&hash=1411ABF107DA9C5FF5070F1FD157035018DFB9DA
+    text: Route
+  utter_lost:
+  - text: Do not worry if you have lost your belongings.....We have a lost and found
+      department on the second floor of the main department...There are high chances
+      it might be there, else report to Mr.Ansh in cabin 302
+  utter_register_complaints:
+  - text: Please fill this form to lodge any complaints you have against the university
+      like the facilities provided, inadequate syllabus and so on http://localhost/chatbot/complaints/index.php
+actions:
+- utter_accept
+- utter_clg_open
+- utter_sorry
+- utter_more_info
+- utter_map
+- utter_hostel_mess_timings
+- utter_faculty

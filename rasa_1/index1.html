@@ -1,0 +1,19 @@
+
+<head>
+  <link rel="stylesheet" href="css files/chatwindow.css" />
+</head>
+<body>
+  
+  <div class="chat-container"></div>
+  <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/>           </script>
+  <script type="text/javascript">
+    var chatroom = new window.Chatroom({
+      host: "http://localhost:5005",
+      title: "University Enquiries",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "Hi, I am a College Enquiry Bot. How may I help you?"
+    });
+    chatroom.openChat();
+  </script>
+</div>
+</body>
